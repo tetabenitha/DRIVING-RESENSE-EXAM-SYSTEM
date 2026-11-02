@@ -1,0 +1,17 @@
+{
+  "name": "dles",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace client run dev\" \"npm --workspace server run dev\"",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
